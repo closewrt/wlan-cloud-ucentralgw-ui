@@ -2,7 +2,7 @@ FROM node:18.7.0-alpine3.15 AS build
 
 COPY package.json package-lock.json /
 
-RUN npm install
+RUN npm --registry https://registry.npm.taobao.org install
 
 COPY . .
 
